@@ -34,7 +34,7 @@ namespace visit_sps
             {
                 try
                 {
-                    dt = DBHelper.ObterLocal(Convert.ToInt32(materialSingleLineTextField_procurar.Text), caminho);
+                    dt = DBHelper.Generico(Convert.ToInt32(materialSingleLineTextField_procurar.Text), caminho, "SELECT * FROM local WHERE id_local = ");
                     if (dt.Rows.Count == 1)
                     {
                         materialSingleLineTextField_nome.Text = dt.Rows[0].ItemArray[1].ToString();

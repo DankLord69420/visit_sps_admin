@@ -33,7 +33,7 @@ namespace visit_sps
             {
                 try
                 {
-                    dt = DBHelper.ObterLocal(Convert.ToInt32(materialSingleLineTextField_procurar.Text), caminho);
+                    dt = DBHelper.Generico(Convert.ToInt32(materialSingleLineTextField_procurar.Text), caminho, "SELECT * FROM local WHERE id_local = ");
                     if (dt.Rows.Count == 0)
                     {
                         MessageBox.Show("O ID indicado não existe!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -60,7 +60,7 @@ namespace visit_sps
 
                         materialRaisedButton_associar.Visible = true;
                         checkedListBox1.Visible = true;
-                        dt = DBHelper.BuscarIDLocalCategoria(caminho, Convert.ToInt32(materialSingleLineTextField_procurar.Text));
+                        dt = DBHelper.Generico(Convert.ToInt32(materialSingleLineTextField_procurar.Text),caminho , "SELECT categoria.id_cat FROM categoria, local, localCategoria WHERE(local.id_local = localCategoria.id_local) AND(categoria.id_cat = localCategoria.id_cat) AND local.id_local =");
 
 
                         for (int i = 0; i < dt.Rows.Count; i++)

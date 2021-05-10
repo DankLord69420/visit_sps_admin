@@ -37,7 +37,7 @@ namespace visit_sps
                 try
                 {
 
-                    dt = DBHelper.ObterLocal(Convert.ToInt32(materialSingleLineTextField_remover.Text), caminho);
+                    dt = DBHelper.Generico(Convert.ToInt32(materialSingleLineTextField_remover.Text), caminho, "SELECT * FROM local WHERE id_local = ");
                     if (dt.Rows.Count == 0)
                     {
                         MessageBox.Show("O ID indicado não existe!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -52,7 +52,7 @@ namespace visit_sps
                             file.Delete();
                         }
 
-                        DBHelper.RemoverLocal(Convert.ToInt32(materialSingleLineTextField_remover.Text), caminho);
+                        DBHelper.Generico(Convert.ToInt32(materialSingleLineTextField_remover.Text), caminho, "DELETE FROM local WHERE id_local=");
                         MessageBox.Show("Eliminado com sucesso!", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         this.Close();
                     }

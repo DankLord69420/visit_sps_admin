@@ -18,7 +18,7 @@ namespace visit_sps
             return con;
         }
 
-        public static DataTable ObterCat(int id, string caminhoDB)
+        public static DataTable Generico(int id,string caminhoDB, string query)
         {
             SQLiteDataAdapter da = null;
             DataTable dt = new DataTable();
@@ -26,7 +26,7 @@ namespace visit_sps
             {
                 using (var cmd = ConexaoDB(caminhoDB).CreateCommand())
                 {
-                    cmd.CommandText = "SELECT * FROM categoria WHERE id_cat=" + id;
+                    cmd.CommandText = query + id;
                     da = new SQLiteDataAdapter(cmd.CommandText, ConexaoDB(caminhoDB));
                     da.Fill(dt);
                     ConexaoDB(caminhoDB).Close();
@@ -37,8 +37,8 @@ namespace visit_sps
             {
                 throw new Exception("Erro", ex);
             }
-        }
 
+        }
 
         public static void AlterCat(Categoria c, string caminhoDB)
         {
@@ -76,69 +76,6 @@ namespace visit_sps
                 throw new Exception("Erro", ex);
             }
 
-        }
-
-        public static DataTable ObterLocal(int id, string caminhoDB)
-        {
-            SQLiteDataAdapter da = null;
-            DataTable dt = new DataTable();
-            try
-            {
-                using (var cmd = ConexaoDB(caminhoDB).CreateCommand())
-                {
-                    cmd.CommandText = "SELECT * FROM local WHERE id_local = " + id;
-                    da = new SQLiteDataAdapter(cmd.CommandText, ConexaoDB(caminhoDB));
-                    da.Fill(dt);
-                    ConexaoDB(caminhoDB).Close();
-                    return dt;
-                }
-            }
-            catch (Exception ex)
-            {
-                throw new Exception("Erro", ex);
-            }
-        }
-
-        public static DataTable RemoverLocal(int id, string caminhoDB)
-        {
-            SQLiteDataAdapter da = null;
-            DataTable dt = new DataTable();
-            try
-            {
-                using (var cmd = ConexaoDB(caminhoDB).CreateCommand())
-                {
-                    cmd.CommandText = "DELETE FROM local WHERE id_local=" + id;
-                    da = new SQLiteDataAdapter(cmd.CommandText, ConexaoDB(caminhoDB));
-                    da.Fill(dt);
-                    ConexaoDB(caminhoDB).Close();
-                    return dt;
-                }
-            }
-            catch (Exception ex)
-            {
-                throw new Exception("Erro", ex);
-            }
-        }
-
-        public static DataTable RemoverCat(int id, string caminhoDB)
-        {
-            SQLiteDataAdapter da = null;
-            DataTable dt = new DataTable();
-            try
-            {
-                using (var cmd = ConexaoDB(caminhoDB).CreateCommand())
-                {
-                    cmd.CommandText = "DELETE FROM categoria WHERE id_cat=" + id;
-                    da = new SQLiteDataAdapter(cmd.CommandText, ConexaoDB(caminhoDB));
-                    da.Fill(dt);
-                    ConexaoDB(caminhoDB).Close();
-                    return dt;
-                }
-            }
-            catch (Exception ex)
-            {
-                throw new Exception("Erro", ex);
-            }
         }
 
         public static DataTable AdicionarCat(Categoria c, string caminhoDB)
@@ -207,28 +144,6 @@ namespace visit_sps
 
         }
 
-        public static DataTable BuscarIDLocalCategoria(string caminhoDB, int id)
-        {
-            SQLiteDataAdapter da = null;
-            DataTable dt = new DataTable();
-            try
-            {
-                using (var cmd = ConexaoDB(caminhoDB).CreateCommand())
-                {
-                    cmd.CommandText = "SELECT categoria.id_cat FROM categoria, local, localCategoria WHERE(local.id_local = localCategoria.id_local) AND(categoria.id_cat = localCategoria.id_cat) AND(local.id_local = '" + id + "')";
-                    da = new SQLiteDataAdapter(cmd.CommandText, ConexaoDB(caminhoDB));
-                    da.Fill(dt);
-                    ConexaoDB(caminhoDB).Close();
-                    return dt;
-                }
-            }
-            catch (Exception ex)
-            {
-                throw new Exception("Erro", ex);
-            }
-
-        }
-
         public static DataTable BuscarCat(string caminhoDB)
         {
             SQLiteDataAdapter da = null;
@@ -254,7 +169,6 @@ namespace visit_sps
         public static string inserirCatLocal(string caminhoDB, int id_cat, int id_local)
         {
             SQLiteDataAdapter da = null;
-            SQLiteDataAdapter da1 = null;
             DataTable dt = new DataTable();
             try
             {

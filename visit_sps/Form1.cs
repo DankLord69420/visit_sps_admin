@@ -15,8 +15,8 @@ namespace visit_sps
     public partial class Form1 : MaterialForm
     {
         readonly MaterialSkin.MaterialSkinManager materialSkinManager;
-        public string dbCaminho;
-        public string imagesCaminho;
+        private string dbCaminho;
+        private string imagesCaminho;
 
         public Form1()
         {

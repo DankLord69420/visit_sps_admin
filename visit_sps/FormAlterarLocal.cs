@@ -15,7 +15,7 @@ namespace visit_sps
     {
         DataTable dt = new DataTable();
         readonly MaterialSkin.MaterialSkinManager materialSkinManager;
-        string caminho;
+        readonly string caminho;
 
         
         public FormAlterarLocal(string dbCaminho)
@@ -125,11 +125,6 @@ namespace visit_sps
                 MessageBox.Show("É necessário preencher os todos os parâmetros requeridos!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             
-
-        }
-
-        private void FormAlterarLocal_Load(object sender, EventArgs e)
-        {
 
         }
     }

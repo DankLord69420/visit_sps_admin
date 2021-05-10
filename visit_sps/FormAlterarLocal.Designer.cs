@@ -459,7 +459,6 @@
             this.Name = "FormAlterarLocal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Alterar Local";
-            this.Load += new System.EventHandler(this.FormAlterarLocal_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

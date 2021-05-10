@@ -16,8 +16,8 @@ namespace visit_sps
     {
         DataTable dt = new DataTable();
         readonly MaterialSkin.MaterialSkinManager materialSkinManager;
-        string caminho;
-        string images;
+        readonly string caminho;
+        readonly    string images;
         int n = -1;
         readonly List<string> ficheiros = new List<string>();
         public FormInserirLocal(string dbCaminho, string imagesCaminho)

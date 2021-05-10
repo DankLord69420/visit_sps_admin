@@ -14,7 +14,7 @@ namespace visit_sps
     public partial class FormAssociar : MaterialForm
     {
         readonly MaterialSkin.MaterialSkinManager materialSkinManager;
-        string caminho;
+        readonly string caminho;
         DataTable dt = new DataTable();
 
         public FormAssociar(string dbCaminho)

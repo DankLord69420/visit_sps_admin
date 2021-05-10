@@ -8,12 +8,12 @@ using System.Data.SQLite;
 
 namespace visit_sps
 {
-    class DBHelper
+    static class DBHelper
     {
         private static SQLiteConnection ConexaoDB(string caminhoDB)
         {
         SQLiteConnection con;
-        con = new SQLiteConnection("Data Source=" + caminhoDB);
+            con = new SQLiteConnection("Data Source=" + caminhoDB);
             con.Open();
             return con;
         }
@@ -42,13 +42,12 @@ namespace visit_sps
 
         public static void AlterCat(Categoria c, string caminhoDB)
         {
-            SQLiteDataAdapter da = null;
+       
             try
             {
                 using (var cmd = ConexaoDB(caminhoDB).CreateCommand())
                 {
                     cmd.CommandText = "UPDATE categoria SET icon = '" + c.icon + "', nome = '" + c.nome + "', nome_eng = '" + c.nomeEng + "' WHERE id_cat=" + c.id_local;
-                    da = new SQLiteDataAdapter(cmd.CommandText, ConexaoDB(caminhoDB));
                     cmd.ExecuteNonQuery();
                     ConexaoDB(caminhoDB).Close();
                 }
@@ -63,14 +62,11 @@ namespace visit_sps
 
         public static void AlterLocal(Local l, string caminhoDB)
         {
-            SQLiteDataAdapter da = null;
-            DataTable dt = new DataTable();
             try
             {
                 using (var cmd = ConexaoDB(caminhoDB).CreateCommand())
                 {
                     cmd.CommandText = "UPDATE local SET nome = '" + l.nome + "', desc = '" + l.desc + "', horario = '" + l.horario + "', horario_eng = '" + l.horarioEng + "', contacto = '" + l.contacto + "', morada = '" + l.morada + "', latitude = '" + l.latitude + "', longitude = '" + l.longitude + "', desc_eng = '" + l.descEng + "', trivago = '" + l.trivago + "' WHERE id_local=" + l.id;
-                    da = new SQLiteDataAdapter(cmd.CommandText, ConexaoDB(caminhoDB));
                     cmd.ExecuteNonQuery();
                     ConexaoDB(caminhoDB).Close();
                 }

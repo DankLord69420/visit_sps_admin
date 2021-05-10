@@ -15,7 +15,7 @@ namespace visit_sps
     {
         DataTable dt = new DataTable();
         readonly MaterialSkin.MaterialSkinManager materialSkinManager;
-        string caminho;
+        readonly string caminho;
         public FormListar(string dbCaminho)
         {
             InitializeComponent();

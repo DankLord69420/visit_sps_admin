@@ -17,7 +17,7 @@ namespace visit_sps
     {
         DataTable dt = new DataTable();
         readonly MaterialSkin.MaterialSkinManager materialSkinManager;
-        string caminho;
+        readonly string caminho;
         readonly string images;
         public FormRemoverLocal(string dbCaminho, string imagesCaminho)
         {

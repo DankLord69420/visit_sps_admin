@@ -269,9 +269,7 @@ namespace visit_sps
                     {
                         using (var cmd1 = ConexaoDB(caminhoDB).CreateCommand())
                         {
-                            cmd1.CommandText = "INSERT INTO localCategoria (id_local, id_cat) VALUES('" + id_local + "', '" + id_cat + "')";
-                            da1 = new SQLiteDataAdapter(cmd1.CommandText, ConexaoDB(caminhoDB));
-                            cmd1.ExecuteNonQuery();
+                            cmd1.CommandText = "INSERT INTO localCategoria (id_local, id_cat) VALUES('" + id_local + "', '" + id_cat + "')";                        
                             ConexaoDB(caminhoDB).Close();
                             return "1";
                         }

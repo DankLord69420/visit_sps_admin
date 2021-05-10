@@ -32,7 +32,7 @@ namespace visit_sps
             {
                 try
                 {
-                    dt = DBHelper.Generico(Convert.ToInt32(materialSingleLineTextField_procurar.Text), caminho, "SELECT * FROM categoria WHERE id_cat =");
+                    dt = DBHelper.ObterCat(Convert.ToInt32(materialSingleLineTextField_procurar.Text), caminho);
                     if (dt.Rows.Count == 1)
                     {
                         materialSingleLineTextField_icon.Text = dt.Rows[0].ItemArray[2].ToString();

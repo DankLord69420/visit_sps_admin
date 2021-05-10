@@ -32,14 +32,14 @@ namespace visit_sps
             {
                 try
                 {
-                    dt = DBHelper.Generico(Convert.ToInt32(materialSingleLineTextField_remover.Text), caminho, "SELECT * FROM categoria WHERE id_cat =");
+                    dt = DBHelper.ObterCat(Convert.ToInt32(materialSingleLineTextField_remover.Text), caminho);
                     if (dt.Rows.Count == 0)
                     {
                         MessageBox.Show("O ID indicado não existe!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                     else
                     {
-                        DBHelper.Generico(Convert.ToInt32(materialSingleLineTextField_remover.Text), caminho, "DELETE FROM categoria WHERE id_cat=");
+                        DBHelper.RemoverCat(Convert.ToInt32(materialSingleLineTextField_remover.Text), caminho);
                         MessageBox.Show("Eliminado com sucesso!", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         this.Close();
                     }

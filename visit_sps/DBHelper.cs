@@ -367,5 +367,28 @@ namespace visit_sps
             }
 
         }
+
+        public static DataTable ObterIDProx(string caminhoDB)
+        {
+            SQLiteDataAdapter da = null;
+            DataTable dt = new DataTable();
+            try
+            {
+                using (var cmd = ConexaoDB(caminhoDB).CreateCommand())
+                {
+                    cmd.CommandText = "SELECT * FROM sqlite_sequence";
+                    da = new SQLiteDataAdapter(cmd.CommandText, ConexaoDB(caminhoDB));
+                    da.Fill(dt);
+                    ConexaoDB(caminhoDB).Close();
+                    return dt;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Erro", ex);
+            }
+
+        }
+
     }
 }

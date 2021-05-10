@@ -63,13 +63,9 @@ namespace visit_sps
                     {
                         string imagemURL = "./";
                         Local l = new Local();
-                        dt = DBHelper.BuscarID(caminho);
-                        int id = Convert.ToInt32(dt.Rows[dt.Rows.Count - 1].ItemArray[0].ToString());
+                        dt = DBHelper.ObterIDProx(caminho);
+                        int id = Convert.ToInt32(dt.Rows[2].ItemArray[1].ToString())+1;
                         string ficheiro = images + @"\" + id;
-                        string nome = new DirectoryInfo(ficheiro).Name;
-                        int j = Convert.ToInt32(nome);
-                        j = j + 1;
-                        ficheiro = images + @"\" + j.ToString();
                         System.IO.Directory.CreateDirectory(ficheiro);
                         string[] lista = ficheiro.Split('\\');
                         int m = Array.IndexOf(lista, "assets");

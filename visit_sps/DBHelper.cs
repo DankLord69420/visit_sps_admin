@@ -254,7 +254,6 @@ namespace visit_sps
         public static string inserirCatLocal(string caminhoDB, int id_cat, int id_local)
         {
             SQLiteDataAdapter da = null;
-            SQLiteDataAdapter da1 = null;
             DataTable dt = new DataTable();
             try
             {
@@ -269,7 +268,8 @@ namespace visit_sps
                     {
                         using (var cmd1 = ConexaoDB(caminhoDB).CreateCommand())
                         {
-                            cmd1.CommandText = "INSERT INTO localCategoria (id_local, id_cat) VALUES('" + id_local + "', '" + id_cat + "')";                        
+                            cmd1.CommandText = "INSERT INTO localCategoria (id_local, id_cat) VALUES('" + id_local + "', '" + id_cat + "')"; 
+                            cmd1.ExecuteNonQuery();
                             ConexaoDB(caminhoDB).Close();
                             return "1";
                         }
@@ -290,7 +290,6 @@ namespace visit_sps
         public static string removerCatLocal(string caminhoDB, int id_cat, int id_local)
         {
             SQLiteDataAdapter da = null;
-            SQLiteDataAdapter da1 = null;
             DataTable dt = new DataTable();
             try
             {
@@ -306,7 +305,6 @@ namespace visit_sps
                         using (var cmd1 = ConexaoDB(caminhoDB).CreateCommand())
                         {
                             cmd1.CommandText = "DELETE FROM localCategoria WHERE id_local ='" + id_local + "'AND id_cat ='" + id_cat + "'";
-                            da1 = new SQLiteDataAdapter(cmd1.CommandText, ConexaoDB(caminhoDB));
                             cmd1.ExecuteNonQuery();
                             ConexaoDB(caminhoDB).Close();
                             return "1";

@@ -119,6 +119,12 @@
     <Compile Include="FormInserirLocal.Designer.cs">
       <DependentUpon>FormInserirLocal.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormInserirPercurso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormInserirPercurso.Designer.cs">
+      <DependentUpon>FormInserirPercurso.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormListar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -137,7 +143,14 @@
     <Compile Include="FormRemoverLocal.Designer.cs">
       <DependentUpon>FormRemoverLocal.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormRemoverPercurso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRemoverPercurso.Designer.cs">
+      <DependentUpon>FormRemoverPercurso.cs</DependentUpon>
+    </Compile>
     <Compile Include="Local.cs" />
+    <Compile Include="Percurso.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -158,6 +171,9 @@
     <EmbeddedResource Include="FormInserirLocal.resx">
       <DependentUpon>FormInserirLocal.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormInserirPercurso.resx">
+      <DependentUpon>FormInserirPercurso.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormListar.resx">
       <DependentUpon>FormListar.cs</DependentUpon>
     </EmbeddedResource>
@@ -166,6 +182,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormRemoverLocal.resx">
       <DependentUpon>FormRemoverLocal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRemoverPercurso.resx">
+      <DependentUpon>FormRemoverPercurso.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -390,5 +390,113 @@ namespace visit_sps
 
         }
 
+        public static DataTable BuscarPercurso(string caminhoDB)
+        {
+            SQLiteDataAdapter da = null;
+            DataTable dt = new DataTable();
+            try
+            {
+                using (var cmd = ConexaoDB(caminhoDB).CreateCommand())
+                {
+                    cmd.CommandText = "SELECT * FROM percurso";
+                    da = new SQLiteDataAdapter(cmd.CommandText, ConexaoDB(caminhoDB));
+                    da.Fill(dt);
+                    ConexaoDB(caminhoDB).Close();
+                    return dt;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Erro", ex);
+            }
+
+        }
+
+        public static DataTable ExistePercurso(string caminhoDB, string nome)
+        {
+            SQLiteDataAdapter da = null;
+            DataTable dt = new DataTable();
+            try
+            {
+                using (var cmd = ConexaoDB(caminhoDB).CreateCommand())
+                {
+                    cmd.CommandText = "SELECT * FROM percurso WHERE nome = '" + nome + "'";
+                    da = new SQLiteDataAdapter(cmd.CommandText, ConexaoDB(caminhoDB));
+                    da.Fill(dt);
+                    ConexaoDB(caminhoDB).Close();
+                    return dt;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Erro", ex);
+            }
+
+        }
+
+        public static DataTable AdicionarPercurso(Percurso p, string caminhoDB)
+        {
+            SQLiteDataAdapter da = null;
+            DataTable dt = new DataTable();
+            try
+            {
+                using (var cmd = ConexaoDB(caminhoDB).CreateCommand())
+                {
+                    cmd.CommandText = "INSERT INTO percurso (nome, pontos, imagem) VALUES ('" + p.nome + "','" + p.pontos + "','" + p.imagem + "')";
+                    da = new SQLiteDataAdapter(cmd.CommandText, ConexaoDB(caminhoDB));
+                    da.Fill(dt);
+                    ConexaoDB(caminhoDB).Close();
+                    return dt;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Erro", ex);
+            }
+
+        }
+
+        public static DataTable ObterPercurso(int id, string caminhoDB)
+        {
+            SQLiteDataAdapter da = null;
+            DataTable dt = new DataTable();
+            try
+            {
+                using (var cmd = ConexaoDB(caminhoDB).CreateCommand())
+                {
+                    cmd.CommandText = "SELECT * FROM percurso WHERE id= " + id;
+                    da = new SQLiteDataAdapter(cmd.CommandText, ConexaoDB(caminhoDB));
+                    da.Fill(dt);
+                    ConexaoDB(caminhoDB).Close();
+                    return dt;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Erro", ex);
+            }
+        }
+
+        public static DataTable RemoverPercurso(int id, string caminhoDB)
+        {
+            SQLiteDataAdapter da = null;
+            DataTable dt = new DataTable();
+            try
+            {
+                using (var cmd = ConexaoDB(caminhoDB).CreateCommand())
+                {
+                    cmd.CommandText = "DELETE FROM percurso WHERE id=" + id;
+                    da = new SQLiteDataAdapter(cmd.CommandText, ConexaoDB(caminhoDB));
+                    da.Fill(dt);
+                    ConexaoDB(caminhoDB).Close();
+                    return dt;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Erro", ex);
+            }
+        }
+
     }
 }

@@ -41,11 +41,13 @@
             this.materialRaisedButton_atualizarLocal = new MaterialSkin.Controls.MaterialRaisedButton();
             this.materialRaisedButton_eliminarCategoria = new MaterialSkin.Controls.MaterialRaisedButton();
             this.materialRaisedButton_associar = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
+            this.materialRaisedButton_listar = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.materialRaisedButton_inserirPercurso = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.materialRaisedButton_eliminarPercurso = new MaterialSkin.Controls.MaterialRaisedButton();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialRaisedButton_listar = new MaterialSkin.Controls.MaterialRaisedButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -122,12 +124,13 @@
             this.materialLabel2.Depth = 0;
             this.materialLabel2.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel2.Location = new System.Drawing.Point(568, 365);
+            this.materialLabel2.Location = new System.Drawing.Point(581, 365);
             this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel2.Name = "materialLabel2";
             this.materialLabel2.Size = new System.Drawing.Size(278, 19);
             this.materialLabel2.TabIndex = 4;
             this.materialLabel2.Text = "Escolher Caminho para a Pasta Images*";
+            this.materialLabel2.Click += new System.EventHandler(this.materialLabel2_Click);
             // 
             // materialSingleLineTextField_bd
             // 
@@ -189,7 +192,7 @@
             this.materialRaisedButton_images.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.materialRaisedButton_images.Depth = 0;
             this.materialRaisedButton_images.Icon = null;
-            this.materialRaisedButton_images.Location = new System.Drawing.Point(601, 396);
+            this.materialRaisedButton_images.Location = new System.Drawing.Point(614, 396);
             this.materialRaisedButton_images.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButton_images.Name = "materialRaisedButton_images";
             this.materialRaisedButton_images.Primary = true;
@@ -268,34 +271,6 @@
             this.materialRaisedButton_associar.UseVisualStyleBackColor = true;
             this.materialRaisedButton_associar.Click += new System.EventHandler(this.materialRaisedButton_associar_Click);
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::visit_sps.Properties.Resources.baseline_close_black_48dp1;
-            this.pictureBox3.Location = new System.Drawing.Point(785, 90);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(93, 89);
-            this.pictureBox3.TabIndex = 7;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::visit_sps.Properties.Resources.baseline_build_black_48dp1;
-            this.pictureBox2.Location = new System.Drawing.Point(457, 103);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(73, 76);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 6;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::visit_sps.Properties.Resources.baseline_add_black_48dp1;
-            this.pictureBox1.Location = new System.Drawing.Point(106, 90);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(92, 89);
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
-            // 
             // materialLabel3
             // 
             this.materialLabel3.AutoSize = true;
@@ -327,11 +302,75 @@
             this.materialRaisedButton_listar.UseVisualStyleBackColor = true;
             this.materialRaisedButton_listar.Click += new System.EventHandler(this.materialRaisedButton_listar_Click);
             // 
+            // materialRaisedButton_inserirPercurso
+            // 
+            this.materialRaisedButton_inserirPercurso.AutoSize = true;
+            this.materialRaisedButton_inserirPercurso.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialRaisedButton_inserirPercurso.Depth = 0;
+            this.materialRaisedButton_inserirPercurso.Enabled = false;
+            this.materialRaisedButton_inserirPercurso.Icon = null;
+            this.materialRaisedButton_inserirPercurso.Location = new System.Drawing.Point(81, 283);
+            this.materialRaisedButton_inserirPercurso.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButton_inserirPercurso.Name = "materialRaisedButton_inserirPercurso";
+            this.materialRaisedButton_inserirPercurso.Primary = true;
+            this.materialRaisedButton_inserirPercurso.Size = new System.Drawing.Size(144, 36);
+            this.materialRaisedButton_inserirPercurso.TabIndex = 62;
+            this.materialRaisedButton_inserirPercurso.Text = "Inserir Percurso";
+            this.materialRaisedButton_inserirPercurso.UseVisualStyleBackColor = true;
+            this.materialRaisedButton_inserirPercurso.Click += new System.EventHandler(this.materialRaisedButton_inserirPercurso_Click);
+            // 
+            // materialRaisedButton_eliminarPercurso
+            // 
+            this.materialRaisedButton_eliminarPercurso.AutoSize = true;
+            this.materialRaisedButton_eliminarPercurso.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialRaisedButton_eliminarPercurso.Depth = 0;
+            this.materialRaisedButton_eliminarPercurso.Enabled = false;
+            this.materialRaisedButton_eliminarPercurso.Icon = null;
+            this.materialRaisedButton_eliminarPercurso.Location = new System.Drawing.Point(756, 283);
+            this.materialRaisedButton_eliminarPercurso.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButton_eliminarPercurso.Name = "materialRaisedButton_eliminarPercurso";
+            this.materialRaisedButton_eliminarPercurso.Primary = true;
+            this.materialRaisedButton_eliminarPercurso.Size = new System.Drawing.Size(156, 36);
+            this.materialRaisedButton_eliminarPercurso.TabIndex = 63;
+            this.materialRaisedButton_eliminarPercurso.Text = "Eliminar Percurso";
+            this.materialRaisedButton_eliminarPercurso.UseVisualStyleBackColor = true;
+            this.materialRaisedButton_eliminarPercurso.Click += new System.EventHandler(this.materialRaisedButton_eliminarPercurso_Click);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::visit_sps.Properties.Resources.baseline_close_black_48dp1;
+            this.pictureBox3.Location = new System.Drawing.Point(785, 90);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(93, 89);
+            this.pictureBox3.TabIndex = 7;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::visit_sps.Properties.Resources.baseline_build_black_48dp1;
+            this.pictureBox2.Location = new System.Drawing.Point(457, 103);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(73, 76);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 6;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::visit_sps.Properties.Resources.baseline_add_black_48dp1;
+            this.pictureBox1.Location = new System.Drawing.Point(106, 90);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(92, 89);
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(989, 486);
+            this.Controls.Add(this.materialRaisedButton_eliminarPercurso);
+            this.Controls.Add(this.materialRaisedButton_inserirPercurso);
             this.Controls.Add(this.materialRaisedButton_listar);
             this.Controls.Add(this.materialLabel3);
             this.Controls.Add(this.materialRaisedButton_associar);
@@ -381,6 +420,8 @@
         private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton_associar;
         private MaterialSkin.Controls.MaterialLabel materialLabel3;
         private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton_listar;
+        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton_inserirPercurso;
+        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton_eliminarPercurso;
     }
 }
 

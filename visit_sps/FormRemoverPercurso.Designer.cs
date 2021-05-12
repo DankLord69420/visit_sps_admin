@@ -1,6 +1,7 @@
-﻿namespace visit_sps
+﻿
+namespace visit_sps
 {
-    partial class FormRemoverLocal
+    partial class FormRemoverPercurso
     {
         /// <summary>
         /// Required designer variable.
@@ -39,15 +40,15 @@
             this.materialRaisedButton_remover.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.materialRaisedButton_remover.Depth = 0;
             this.materialRaisedButton_remover.Icon = null;
-            this.materialRaisedButton_remover.Location = new System.Drawing.Point(75, 154);
+            this.materialRaisedButton_remover.Location = new System.Drawing.Point(78, 152);
             this.materialRaisedButton_remover.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButton_remover.Name = "materialRaisedButton_remover";
             this.materialRaisedButton_remover.Primary = true;
             this.materialRaisedButton_remover.Size = new System.Drawing.Size(84, 36);
-            this.materialRaisedButton_remover.TabIndex = 14;
+            this.materialRaisedButton_remover.TabIndex = 17;
             this.materialRaisedButton_remover.Text = "Remover";
             this.materialRaisedButton_remover.UseVisualStyleBackColor = true;
-            this.materialRaisedButton_remover.Click += new System.EventHandler(this.materialRaisedButton_remover_Click);
+            this.materialRaisedButton_remover.Click += new System.EventHandler(this.materialRaisedButton_remover_Click_1);
             // 
             // materialLabel1
             // 
@@ -55,18 +56,18 @@
             this.materialLabel1.Depth = 0;
             this.materialLabel1.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel1.Location = new System.Drawing.Point(12, 84);
+            this.materialLabel1.Location = new System.Drawing.Point(7, 82);
             this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel1.Name = "materialLabel1";
-            this.materialLabel1.Size = new System.Drawing.Size(209, 19);
-            this.materialLabel1.TabIndex = 13;
-            this.materialLabel1.Text = "Insira o ID do Local a eliminar";
+            this.materialLabel1.Size = new System.Drawing.Size(232, 19);
+            this.materialLabel1.TabIndex = 16;
+            this.materialLabel1.Text = "Insira o ID do Percurso a eliminar";
             // 
             // materialSingleLineTextField_remover
             // 
             this.materialSingleLineTextField_remover.Depth = 0;
             this.materialSingleLineTextField_remover.Hint = "";
-            this.materialSingleLineTextField_remover.Location = new System.Drawing.Point(91, 118);
+            this.materialSingleLineTextField_remover.Location = new System.Drawing.Point(94, 116);
             this.materialSingleLineTextField_remover.MaxLength = 32767;
             this.materialSingleLineTextField_remover.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialSingleLineTextField_remover.Name = "materialSingleLineTextField_remover";
@@ -75,21 +76,21 @@
             this.materialSingleLineTextField_remover.SelectionLength = 0;
             this.materialSingleLineTextField_remover.SelectionStart = 0;
             this.materialSingleLineTextField_remover.Size = new System.Drawing.Size(53, 23);
-            this.materialSingleLineTextField_remover.TabIndex = 12;
+            this.materialSingleLineTextField_remover.TabIndex = 15;
             this.materialSingleLineTextField_remover.TabStop = false;
             this.materialSingleLineTextField_remover.UseSystemPasswordChar = false;
             // 
-            // FormRemoverLocal
+            // FormRemoverPercurso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(238, 210);
+            this.ClientSize = new System.Drawing.Size(246, 210);
             this.Controls.Add(this.materialRaisedButton_remover);
             this.Controls.Add(this.materialLabel1);
             this.Controls.Add(this.materialSingleLineTextField_remover);
-            this.Name = "FormRemoverLocal";
+            this.Name = "FormRemoverPercurso";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Eliminar um Local";
+            this.Text = "Remover Percurso";
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -69,6 +69,8 @@ namespace visit_sps
             materialRaisedButton_eliminarCategoria.Enabled = !string.IsNullOrEmpty(materialSingleLineTextField_bd.Text) && !string.IsNullOrEmpty(materialSingleLineTextField_images.Text);
             materialRaisedButton_associar.Enabled = !string.IsNullOrEmpty(materialSingleLineTextField_bd.Text) && !string.IsNullOrEmpty(materialSingleLineTextField_images.Text);
             materialRaisedButton_listar.Enabled = !string.IsNullOrEmpty(materialSingleLineTextField_bd.Text) && !string.IsNullOrEmpty(materialSingleLineTextField_images.Text);
+            materialRaisedButton_inserirPercurso.Enabled = !string.IsNullOrEmpty(materialSingleLineTextField_bd.Text) && !string.IsNullOrEmpty(materialSingleLineTextField_images.Text);
+            materialRaisedButton_eliminarPercurso.Enabled = !string.IsNullOrEmpty(materialSingleLineTextField_bd.Text) && !string.IsNullOrEmpty(materialSingleLineTextField_images.Text);
         }
 
         private void materialSingleLineTextField_images_TextChanged(object sender, EventArgs e)
@@ -81,7 +83,8 @@ namespace visit_sps
             materialRaisedButton_eliminarCategoria.Enabled = !string.IsNullOrEmpty(materialSingleLineTextField_bd.Text) && !string.IsNullOrEmpty(materialSingleLineTextField_images.Text);
             materialRaisedButton_associar.Enabled = !string.IsNullOrEmpty(materialSingleLineTextField_bd.Text) && !string.IsNullOrEmpty(materialSingleLineTextField_images.Text);
             materialRaisedButton_listar.Enabled = !string.IsNullOrEmpty(materialSingleLineTextField_bd.Text) && !string.IsNullOrEmpty(materialSingleLineTextField_images.Text);
-
+            materialRaisedButton_inserirPercurso.Enabled = !string.IsNullOrEmpty(materialSingleLineTextField_bd.Text) && !string.IsNullOrEmpty(materialSingleLineTextField_images.Text);
+            materialRaisedButton_eliminarPercurso.Enabled = !string.IsNullOrEmpty(materialSingleLineTextField_bd.Text) && !string.IsNullOrEmpty(materialSingleLineTextField_images.Text);
         }
 
         private void materialRaisedButton_atualizarLocal_Click(object sender, EventArgs e)
@@ -130,6 +133,23 @@ namespace visit_sps
         {
             FormListar f2 = new FormListar(dbCaminho);
             f2.ShowDialog();
+        }
+
+        private void materialRaisedButton_inserirPercurso_Click(object sender, EventArgs e)
+        {
+            FormInserirPercurso f2 = new FormInserirPercurso(dbCaminho, imagesCaminho);
+            f2.ShowDialog();
+        }
+
+        private void materialRaisedButton_eliminarPercurso_Click(object sender, EventArgs e)
+        {
+            FormRemoverPercurso f2 = new FormRemoverPercurso(dbCaminho, imagesCaminho);
+            f2.ShowDialog();
+        }
+
+        private void materialLabel2_Click(object sender, EventArgs e)
+        {
+
         }
     }
     

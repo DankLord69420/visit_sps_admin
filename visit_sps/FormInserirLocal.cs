@@ -49,7 +49,14 @@ namespace visit_sps
                     ficheiros.Add(ficheiro);
                 }
             }
-            pictureBox1.Load(ficheiros[0]);
+            if (ficheiros.Count == 0)
+            {
+
+            }
+            else
+            {
+                pictureBox1.Load(ficheiros[0]);
+            }
             materialRaisedButton1_next.Visible = true;
         }
 

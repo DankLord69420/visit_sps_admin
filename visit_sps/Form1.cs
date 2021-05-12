@@ -146,11 +146,6 @@ namespace visit_sps
             FormRemoverPercurso f2 = new FormRemoverPercurso(dbCaminho, imagesCaminho);
             f2.ShowDialog();
         }
-
-        private void materialLabel2_Click(object sender, EventArgs e)
-        {
-
-        }
     }
     
 }

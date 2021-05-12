@@ -51,7 +51,7 @@ namespace visit_sps
             }
             if (ficheiros.Count == 0)
             {
-
+                //Faz nada
             }
             else
             {

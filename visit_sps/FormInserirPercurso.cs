@@ -17,7 +17,6 @@ namespace visit_sps
         readonly MaterialSkin.MaterialSkinManager materialSkinManager;
         readonly string caminho;
         readonly string images;
-        int n = -1;
         readonly List<string> ficheiros = new List<string>();
         public FormInserirPercurso(string dbCaminho, string imagesCaminho)
         {
@@ -51,7 +50,7 @@ namespace visit_sps
 
             if (ficheiros.Count == 0)
             {
-
+                //Faz nada
             }
             else
             {

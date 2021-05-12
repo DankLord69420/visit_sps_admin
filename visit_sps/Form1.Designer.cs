@@ -130,7 +130,6 @@
             this.materialLabel2.Size = new System.Drawing.Size(278, 19);
             this.materialLabel2.TabIndex = 4;
             this.materialLabel2.Text = "Escolher Caminho para a Pasta Images*";
-            this.materialLabel2.Click += new System.EventHandler(this.materialLabel2_Click);
             // 
             // materialSingleLineTextField_bd
             // 

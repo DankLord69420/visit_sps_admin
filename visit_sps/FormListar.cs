@@ -49,6 +49,17 @@ namespace visit_sps
                 materialListView2.Items.Add(item);
             }
 
+            dt.Clear();
+
+            dt = DBHelper.BuscarPercurso(caminho);
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                int id = Convert.ToInt32(dt.Rows[i].ItemArray[0].ToString());
+                string nome = dt.Rows[i].ItemArray[1].ToString();
+                var item = new ListViewItem(new[] { id.ToString(), nome });
+                materialListView_percursos.Items.Add(item);
+            }
+
 
         }
     }

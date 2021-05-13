@@ -36,6 +36,10 @@
             this.materialListView2 = new MaterialSkin.Controls.MaterialListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.materialListView_percursos = new MaterialSkin.Controls.MaterialListView();
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
             this.SuspendLayout();
             // 
             // materialLabel1
@@ -71,7 +75,7 @@
             this.id,
             this.nome});
             this.materialListView1.Depth = 0;
-            this.materialListView1.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World);
+            this.materialListView1.Font = new System.Drawing.Font("Roboto", 32F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World);
             this.materialListView1.FullRowSelect = true;
             this.materialListView1.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.materialListView1.HideSelection = false;
@@ -101,7 +105,7 @@
             this.columnHeader1,
             this.columnHeader2});
             this.materialListView2.Depth = 0;
-            this.materialListView2.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World);
+            this.materialListView2.Font = new System.Drawing.Font("Roboto", 32F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World);
             this.materialListView2.FullRowSelect = true;
             this.materialListView2.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.materialListView2.HideSelection = false;
@@ -124,11 +128,56 @@
             this.columnHeader2.Text = "Nome";
             this.columnHeader2.Width = 200;
             // 
+            // materialListView_percursos
+            // 
+            this.materialListView_percursos.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.materialListView_percursos.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader3,
+            this.columnHeader4});
+            this.materialListView_percursos.Depth = 0;
+            this.materialListView_percursos.Font = new System.Drawing.Font("Roboto", 32F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World);
+            this.materialListView_percursos.FullRowSelect = true;
+            this.materialListView_percursos.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
+            this.materialListView_percursos.HideSelection = false;
+            this.materialListView_percursos.Location = new System.Drawing.Point(612, 105);
+            this.materialListView_percursos.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.materialListView_percursos.MouseState = MaterialSkin.MouseState.OUT;
+            this.materialListView_percursos.Name = "materialListView_percursos";
+            this.materialListView_percursos.OwnerDraw = true;
+            this.materialListView_percursos.Size = new System.Drawing.Size(239, 313);
+            this.materialListView_percursos.TabIndex = 5;
+            this.materialListView_percursos.UseCompatibleStateImageBehavior = false;
+            this.materialListView_percursos.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "ID";
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Nome";
+            this.columnHeader4.Width = 200;
+            // 
+            // materialLabel3
+            // 
+            this.materialLabel3.AutoSize = true;
+            this.materialLabel3.Depth = 0;
+            this.materialLabel3.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel3.Location = new System.Drawing.Point(692, 83);
+            this.materialLabel3.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel3.Name = "materialLabel3";
+            this.materialLabel3.Size = new System.Drawing.Size(77, 19);
+            this.materialLabel3.TabIndex = 4;
+            this.materialLabel3.Text = "Percursos";
+            // 
             // FormListar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(585, 450);
+            this.ClientSize = new System.Drawing.Size(877, 440);
+            this.Controls.Add(this.materialListView_percursos);
+            this.Controls.Add(this.materialLabel3);
             this.Controls.Add(this.materialListView2);
             this.Controls.Add(this.materialListView1);
             this.Controls.Add(this.materialLabel2);
@@ -152,5 +201,9 @@
         private MaterialSkin.Controls.MaterialListView materialListView2;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
+        private MaterialSkin.Controls.MaterialListView materialListView_percursos;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
+        private MaterialSkin.Controls.MaterialLabel materialLabel3;
     }
 }
